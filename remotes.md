@@ -242,3 +242,88 @@ is enough.
 
 * `git push` → Upload changes
 * `git pull` → Download and merge changes
+
+
+## Git Push
+
+Uploads local commits to a remote repository.
+
+### Syntax
+
+```bash
+git push <remote-name> <branch-name>
+```
+
+### Example
+
+```bash
+git push origin main
+```
+
+### Command Breakdown
+
+* `git` → Git command line tool
+* `push` → Upload local commits
+* `origin` → Remote repository name
+* `main` → Branch name
+
+### Simple Meaning
+
+Upload commits from the local `main` branch to the `origin` remote repository.
+
+---
+
+### Push Current Branch
+
+```bash
+git push
+```
+
+Used when the current branch is already connected to a remote branch.
+
+---
+
+### Push a New Branch
+
+```bash
+git push -u origin feature-branch
+```
+
+* `-u` → Set upstream (tracking) branch
+* Future pushes can be done using:
+
+```bash
+git push
+```
+
+---
+
+### Common Issues
+
+#### Push Rejected
+
+```bash
+git pull
+```
+
+Pull latest changes, resolve conflicts, then push again.
+
+#### Check Remote
+
+```bash
+git remote -v
+```
+
+Verify the correct remote repository is configured.
+
+---
+
+### Quick Notes
+
+* `git push` → Upload changes
+* `git pull` → Download and merge changes
+* `git clone` → Copy remote repository locally
+* `git remote add` → Connect local repo to a remote repo
+
+```
+```

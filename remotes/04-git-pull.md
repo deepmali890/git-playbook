@@ -1,47 +1,86 @@
-## Git Push
+## Git Pull
 
-Uploads local commits to a remote repository.
+Fetches and merges changes from a remote repository into the current branch.
 
 ### Syntax
 
 ```bash
-git push <remote-name> <branch-name>
+git pull <remote-name> <branch-name>
 ```
 
 ### Example
 
 ```bash
-git push origin main
+git pull origin main
 ```
 
 ### Command Breakdown
 
 * `git` → Git command line tool
-* `push` → Upload local commits
-* `origin` → Remote repository name
+* `pull` → Fetch + Merge changes
+* `origin` → Remote repository
 * `main` → Branch name
 
 ### Simple Meaning
 
-Upload commits from the local `main` branch to the `origin` remote repository.
+Download the latest changes from the remote repository and merge them into the current branch.
 
-### Push a New Branch
+---
 
-```bash
-git push -u origin feature-branch
+### How Git Pull Works
+
+```text
+git pull
+   ↓
+git fetch
+   ↓
+git merge
 ```
 
-* `-u` → Sets upstream tracking for future pushes
+---
 
-After this:
+### Why Use Git Pull?
+
+* Keep local repository up to date
+* Reduce merge conflicts
+* Stay synchronized with the team
+
+---
+
+### Common Conflict
+
+If both developers modify the same code:
 
 ```bash
-git push
+git pull origin main
 ```
 
-is enough.
+Git may create a merge conflict.
 
-### Quick Note
+Resolve the conflict, then:
 
-* `git push` → Upload changes
-* `git pull` → Download and merge changes
+```bash
+git add .
+git commit -m "Resolved merge conflict"
+```
+
+---
+
+### Best Practice
+
+Before starting work:
+
+```bash
+git pull origin main
+```
+
+---
+
+### Quick Notes
+
+* `git fetch` → Download only
+* `git pull` → Download + Merge
+* Pull regularly before starting work
+
+```
+```
